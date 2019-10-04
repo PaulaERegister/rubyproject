@@ -19,4 +19,8 @@
 @import "base/variables";
 
 // Partials
+@import "partials/*";
 @import "partials/layout/*";
+
+// Defaults
+@import "base/default";
