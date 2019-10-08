@@ -34,7 +34,8 @@ class PostsController < ApplicationController
       posts = Post.by_category(branch, category)
     elsif category.present? && search.present?
       posts = Post.by_category(branch, category).search(search)
+    else
     end
-    Post.limit(30)
+    posts
   end
 end
