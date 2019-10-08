@@ -4,15 +4,15 @@ class PostsController < ApplicationController
   end
 
   def hobby
-    post_for_branch(params[:action])
+    posts_for_branch(params[:action])
   end
 
   def study
-    post_for_branch(params[:action])
+    posts_for_branch(params[:action])
   end
 
   def team
-    post_for_branch(params[:action])
+    posts_for_branch(params[:action])
   end
 
   private
