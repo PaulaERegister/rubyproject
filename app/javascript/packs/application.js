@@ -24,8 +24,7 @@ require('jquery')
 console.log("Testing")
 $(document).on('turbolinks:load', function() {
     var isLoading = false;
-    console.log($('.infinite-scroll', this))
-    if ($('.infinite-scroll', this).size() > 0) {
+    if ($('.infinite-scroll', this).lenth > 0) {
         $(window).on('scroll', function() {
             var more_posts_url = $('.pagination a.next_page').attr('href');
             var threshold_passed = $(window).scrollTop() > $(document).height() - $(window).height() - 60;
