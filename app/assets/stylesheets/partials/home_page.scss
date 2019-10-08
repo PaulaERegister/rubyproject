@@ -220,3 +220,14 @@
     text-decoration: underline;
   }
 }
+.new-post {
+  height: calc(100vh - 50px);
+  background-color: white;
+  h1 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  input, textarea, select {
+    width: 100%;
+  }
+}
