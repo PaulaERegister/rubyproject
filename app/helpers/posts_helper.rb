@@ -15,4 +15,8 @@ module PostsHelper
   def post_format_partial_path
     current_page?(root_path) ? 'posts/post/home_page' : 'posts/post/branch_page'
   end
+
+  def category_field_partial_path
+    params[:category].present? ? 'posts/branch/search_form/category_field' : 'shared/empty_partial'
+  end
 end
