@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   before_action :redirect_if_not_signed_in, only: [:new]
   def show
     @post = Post.find(params[:id])
+    if user_signed_in?
+      @message_sent = conversation_exists
+    end
   end
 
   def hobby
@@ -39,6 +42,10 @@ class PostsController < ApplicationController
       format.html
       format.js {render partial: 'posts/posts_pagination_page'}
     end
+  end
+
+  def conversation_exists
+    Private::Conversation.between_users(current_user.id, @post.user.id).present?
   end
 
   def post_params
