@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
       @private_conversations_windows = []
     end
   end
+
+
   private
 
   def set_user_data
