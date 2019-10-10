@@ -1,3 +1,6 @@
+require '../shared/messages_helper'
+include Shared::MessagesHelper
+
 module Private::MessagesHelper
   def private_message_date_check(message, previous_message)
     if defined?(previous_message) && previous_message.present?
@@ -19,4 +22,9 @@ module Private::MessagesHelper
   def seen_or_unseen(message)
     message.seen == false ? 'unseen' : ''
   end
+
+  def replace_link_to_private_messages_partial_path
+    'private/messages/load_more_messages/window/replace_link_to_messages'
+  end
+
 end
